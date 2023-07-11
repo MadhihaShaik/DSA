@@ -9,37 +9,31 @@ public class Minmax {
     int b = in.nextInt();
     System.out.print("Enter the third number: ");
     int c = in.nextInt();
-    Min(a,b,c);
-    Max(a,b,c);
+    int min = Min(a,b,c);
+    int max =Max(a,b,c);
+    System.out.println("The min num is :"+min);
+    System.out.println("The max num is: "+max);
     in.close();
     }
-static void Min(int a ,int b,int c){
-    if ((a<b)&&(a<c)){
-        System.out.println("The min num is :"+a);
+static int Min(int a ,int b,int c){
+    int max = a;
+    if (b>max){
+        max = b;
     }
-    else{
-        if(b<c){
-            System.out.println("The min num is :"+b);
-        }
-        else{
-            System.out.println("The min num is :"+c);
-
-        }
+    if(c>max){
+        max =c;
     }
+    return max;
     }
-    static void Max(int a, int b, int c){
-          if ((a>b)&&(a>c)){
-        System.out.println("The max num is :"+a);
+    static int Max(int a, int b, int c){
+       int min = a;
+          if (b<min){
+            min = b;
+              }
+    if(c<min){
+        min = c;
     }
-    else{
-        if(b>c){
-            System.out.println("The max num is :"+b);
-        }
-        else{
-            System.out.println("The max num is :"+c);
-
-        }
-    }
+    return min;
     }
 }
 
