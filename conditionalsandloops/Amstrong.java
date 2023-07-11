@@ -1,7 +1,5 @@
 package conditionalsandloops;
 
-import java.util.Scanner;
-
 public class Amstrong {
     public static void main(String[] args) {
         // Scanner in = new Scanner(System.in);
